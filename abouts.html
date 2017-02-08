@@ -1,0 +1,663 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Gangez|About</title>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+	
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+   <style>
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+.flex-container.around-justified{
+	-ms-flex-pack: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-align: initial;
+    -webkit-align-items: initial;
+    align-items: initial;
+}
+#site-footer {
+height:400px;	
+background: dark green;
+}
+
+
+.footer-copyright grey darken-4{
+    background: #a9a9a9;
+}
+
+.section grey lighten-5 ng-scope
+{
+	background-color: #fb8c00;
+}
+.btn {
+    font-weight: 700;
+    margin: 0 0 8px 40px;
+    color: #333;
+}
+.theme-yellow {
+    background-color: #F5AA23 !important;
+}
+.green.lighten-2 {
+    background-color: #81C784 !important;
+}
+.green.lighten-4 {
+    background-color: #C8E6C9 !important;
+}
+.orange.darken-1 {
+    background-color: #fb8c00 !important;
+}
+.orange.lighten-4 {
+    background-color: #ffe0b2 !important;
+}
+.light-blue.accent-3 {
+    background-color: #00b0ff !important;
+}
+.light-blue.lighten-5 {
+    background-color: #e1f5fe !important;
+}
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+header.carousel {
+    height: 50%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+.flex-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+/* Footer Styles */
+
+footer {
+    
+	
+    background-color: #F5AA23 !important;
+     
+    
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}
+
+.plan-price h3 {1
+    display: inline-block;
+}
+
+.pricing-toggle {
+    border: 2px solid #F5AA23;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 16px 0px;
+}
+
+.plan-selector {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    background: transparent;
+    color: #F5AA23;
+}
+
+.plan-selector.selected {
+    background: #F5AA23;
+    color: white;
+}
+
+.pricing-chart {
+    max-width: 500px;
+    background: #F5F5F5;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin: 30px 0;
+}
+
+.pricing-chart .plan-pricing {
+    padding: 16px;
+    border-right: 1px solid #D4D4D4;
+}
+
+.pricing-header {
+    padding: 16px;
+    background: #F5AA23
+}
+
+.pricing-content {
+    background: #F5F5F5;
+    color: black;
+    height: 100%;
+    padding: 16px
+}
+
+.pricing-element {
+    width: 250px;
+    height: 295px;
+    overflow: hidden;
+    margin: 16px
+}
+
+.pricing-chart-container {
+    margin: 8px 0px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    width: calc(33% - 12px);
+    overflow: hidden;
+}
+
+.pricing-chart-container .plan-name {
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
+    font-size: 20px;
+	text-align: center;
+}
+.plan-info {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.plan-info li {
+    padding: 8px 0px;
+    border-bottom: 1px solid #F2f2f2;
+}
+
+#monthly,#quarterly
+{
+text-decoration:none;
+padding:15px;
+background:#F5AA23;
+color:white;
+cursor:pointer;
+margin:15px 0;
+border:3px solid #F5AA23;
+border-bottom-left-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+#quarterly
+{
+background:#fff;
+color:#F5AA23;
+border-bottom-left-radius: 0;
+border-top-left-radius: 0;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+#plan1,#plan1a,#plan2,#plan2b,#plan3,#plan3c
+{
+text-align:center;
+}
+
+#plan1a,#plan2b,#plan3c,#timea,#taska,#taskb,#taskc
+{
+	display:none;
+}
+.aboutc p
+{
+padding-left:25%;
+padding-right:25%;
+padding-top:20px;
+font-family: 'Open Sans', sans-serif;;
+}
+
+#but
+{
+  outline:none;
+  background:#000;
+  color:#fff;
+  padding:10px;
+  border-radius:10px;
+
+}
+
+#list a
+{
+font-size:20px;
+text-align:center;
+cursor:pointer;
+}
+#list a:hover
+{
+  color:#ff5050;
+}
+
+
+.navbar-inner {
+    background-color:transparent;
+}
+navbar-default {
+	background-color:transparent !important;
+	border-color:transparent;
+	background-image:none;
+	box-shadow:none;	
+}
+.call{
+padding-left:40%;
+}
+.grey.darken-3 {
+  background-color: #424242 !important;
+}
+.planning{
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	 font-family: Open Sans-Regular;
+     font-size: 34px;
+     line-height:41px;
+}
+.plann{
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: Open Sans-Regular;
+    font-size: 16px;
+    line-height:30px;
+}
+.planning1{
+font-family: Open Sans-Regular;
+    font-size: 24px;
+    line-height:29px;
+}
+.btm{
+background-color:F5AA23;
+ -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.dropbtn {
+    background-color: #000000;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:#000000;
+}
+
+
+
+</style>
+	
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	 <script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.js"></script>
+	 <script src="js/contact_me.js"></script>
+  <script src="js/jqBootstrapValidation.js"></script>
+  
+	
+
+   
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Gangez</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                   
+                    
+                    <li class="dropdown">
+                        <button class="dropbtn">Shopify services</button> <b class="caret"></b></a>
+                        <ul class="dropdown-content">
+						<li>
+                                <a href="freestoresetup.html">Free Store Setup</a>
+                            </li>
+					  
+							<li>
+                                <a href="addingproducts.html">Adding Products</a>
+                            </li>
+                            <li>
+                                <a href="graphics.html">Graphic Services</a>
+                            </li>
+                            <li>
+                                <a href="app.html">App Inttegrations</a>
+                            </li>
+                            <li>
+                                <a href="small.html">Small Tasks</a>
+                            </li>
+                            <li>
+                                <a href="hire.html">Hire a VA/Team</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">E-Commerce services</button> <b class="caret"></b></a>
+                        <ul class="dropdown-content">
+                            <li>
+                                <a href="onlinestore.html">Online Store Setup</a>
+                            </li>
+                            <li>
+                                <a href="app.html">App Development</a>
+                            </li>
+                            <li>
+                                <a href="webdevelopment.html">Web Development</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li>
+                        <a href="pricing-chart.html">Pricing_Chart</a>
+                    </li>
+                    
+					<li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('img/img1.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>The Shopify Experts</h2>
+					<p>Fuel Your Growth with our services</p>
+					<a href="contact.html" class="grey-text text-darken-4 btn waves-effect waves-light theme-yellow">GET STARTED</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('img/img2.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Free Shopify Store Setup</h2>
+					<p>Create an online store</p>
+					<a href="#services" class="btn grey-text text-darken-4 waves-effect waves-light theme-yellow">VIEW SERVICES</a>
+					<a href="contact.html" class="grey-text text-darken-4 btn waves-effect waves-light theme-yellow">GET A QUOTE</a>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+</head>
+<body>
+<div class="container">
+<p1>Affordable and effective corporate-level support and services for small clients - transform the way you run your business and drive your company to success. We believe in providing corporate-level services to all of our small business or start-up clients. To help you grow and expand successfully manage your business. We are flexible and eager to work on any project or task you need help with and we are dedicated to providing you creative solutions, tailored to your individual needs.
+
+<h3>Our story</h3>
+Gangez was started as a way to provide corporate-level support and services to small businesses and individual clients. We started out as a small online shop, but with the constantly expanding customer base, managing our company was becoming increasingly difficult. The more the business expanded, the harder it got to provide each and every one of our customers with the individual attention they deserved.
+
+After a series of bad experiences with online staff for hire, we decided it was time to transform the world of small business. We founded Gangez in 2015 to provide the level of services and support big corporations possess - without having to pay a fortune for it. Hiring online staff can be a low cost option, but it’s rarely a reliable long-term solution. We at Gangez want to change the way you run your business and help you successfully manage your team, grow your customer base and expand your reach.
+
+<h3>Our Mission</h3>
+We believe in helping startups grow globally and help companies reach their customers in an affordable but effective way. We are dedicated to provide low cost and reliable 24/7 support, so you can successfully manage your business and drive your company to success.
+
+Gangez was founded to provide small businesses with the same level of support and marketing services big corporations enjoy. We are extremely passionate about what we do and we believe in working for, as well as with our clients. Regardless of your business goals or current requirements, we strive to offer creative and custom-tailored solutions and ongoing support, so you can effectively expand your business and develop your personal brand.
+
+<h3>Founder's Message</h3>
+As a small business owner myself, I’m well aware of the burdens and obstacles, involved in running your own company. I’ve had my share of bad experiences - both with trying to do everything on my own, and trusting the future of my company in the hands of unreliable and uninterested employees.
+
+I founded Gangez, so others would receive the same level of services and support big corporations do, but without having to pay a fortune for it. Instead of hiring people who are not reliable, we believe in recruiting skilled employees, who feel just as passionate and dedicated to your project, as you do.
+</p1>
+</div>
+<footer class="page-footer grey darken-3">
+
+        
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="footer-title white-text"><u><h2>About Gangez</h2></u></div>
+                    <ul>
+                        <li><a href="about.html"><h4>Our Story</h4></a></li>
+                        <li><a href="about.html"><h4>Our Mission</h4></a></li>
+                        <li><a href="contact.html"><h4>Contact Us</h4></a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                    <div class="footer-title white-text"><u><h2>Quick Links</h2></u></div>
+                    <ul>
+                       <li><a href="freestoresetup.html"><h4>Free Store Setup*</h4></a></li>
+                        <li><a href="hire.html"><h4>Hire a VA or Team</h4></a></li>
+                        <li><a href="addingproducts.html"><h4>Data Entry</h4></a></li>
+                        <li><a href="small.html"><h4>Small Tasks</h4></a></li>
+                        <li><a href="privacy-policy.html"><h4>Privacy Policy</h4></a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                    <div class="footer-title white-text"><h2>Open A Free Store</h2></div>
+                    <ul>
+                        <li>
+                            <a href="https://www.shopify.com/?ref=gangez" target="_blank">
+                                <img class="responsive-img footer-store-img" src="img/free-store.jpg">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                    <div class="footer-title white-text">Follow Us</div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/gangezgroup" target="_blank"> <i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/Gangez_Group" target="_blank"> <i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/gangez" target="_blank"> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+                        <a href="https://plus.google.com/u/0/114639515470535406892" target="_blank"> <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a>
+                    </div>
+                    <div>
+                        <form action="//inkedcreatively.us9.list-manage.com/subscribe/post?u=1b9602e200657160c01f5c06e&amp;id=175250e2f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate ng-pristine ng-valid" target="_blank" novalidate="novalidate">
+                            <div>Stay Updated</div>
+                            <div class="input-field">
+                                <input type="email" name="email" class="validate" required="" id="mce-EMAIL" aria-required="true">
+                                <label for="mce-EMAIL" data-error="Enter a valid email address">Email Address *</label>
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="b_1b9602e200657160c01f5c06e_175250e2f5" tabindex="-1" value="">
+                            </div>
+                            <i class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow waves-input-wrapper" style=""><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="waves-button-input"></i>
+                        </form>
+                    </div>
+					 </div>
+            </div>
+                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                    <script type="text/javascript">
+                    (function($) {
+                        window.fnames = new Array();
+                        window.ftypes = new Array();
+                        fnames[0] = 'EMAIL';
+                        ftypes[0] = 'email';
+                    }(jQuery));
+                    var $mcj = jQuery.noConflict(true);
+                    </script>
+                    <!--End mc_embed_signup-->
+               
+        
+        <div class="footer-copyright grey darken-4">
+            <div class="container center">
+                © Copyrights Reserved. Gangez Support Services Pvt. Ltd.
+            </div>
+        </div>
+    </footer>
+	 <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+
+
+
+</body>
+</html>

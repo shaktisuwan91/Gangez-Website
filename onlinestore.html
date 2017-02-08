@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gangez|Adding Products</title>
+	
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+  
+
+<style>
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+.flex-container.around-justified{
+	-ms-flex-pack: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-align: initial;
+    -webkit-align-items: initial;
+    align-items: initial;
+}
+#site-footer {
+height:400px;	
+background: dark green;
+}
+
+
+.footer-copyright grey darken-4{
+    background: #a9a9a9;
+}
+
+.section grey lighten-5 ng-scope
+{
+	background-color: #fb8c00;
+}
+.btn {
+    font-weight: 700;
+    margin: 0 0 8px 40px;
+    color: #333;
+}
+.theme-yellow {
+    background-color: #F5AA23 !important;
+}
+.green.lighten-2 {
+    background-color: #81C784 !important;
+}
+.green.lighten-4 {
+    background-color: #C8E6C9 !important;
+}
+.orange.darken-1 {
+    background-color: #fb8c00 !important;
+}
+.orange.lighten-4 {
+    background-color: #ffe0b2 !important;
+}
+.light-blue.accent-3 {
+    background-color: #00b0ff !important;
+}
+.light-blue.lighten-5 {
+    background-color: #e1f5fe !important;
+}
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+header.carousel {
+    height: 50%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+.flex-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+/* Footer Styles */
+
+footer {
+    
+	
+    background-color: #F5AA23 !important;
+     
+    
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}
+
+.plan-price h3 {1
+    display: inline-block;
+}
+
+.pricing-toggle {
+    border: 2px solid #F5AA23;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 16px 0px;
+}
+
+.plan-selector {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    background: transparent;
+    color: #F5AA23;
+}
+
+.plan-selector.selected {
+    background: #F5AA23;
+    color: white;
+}
+
+.pricing-chart {
+    max-width: 500px;
+    background: #F5F5F5;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin: 30px 0;
+}
+
+.pricing-chart .plan-pricing {
+    padding: 16px;
+    border-right: 1px solid #D4D4D4;
+}
+
+.pricing-header {
+    padding: 16px;
+    background: #F5AA23
+}
+
+.pricing-content {
+    background: #F5F5F5;
+    color: black;
+    height: 100%;
+    padding: 16px
+}
+
+.pricing-element {
+    width: 250px;
+    height: 295px;
+    overflow: hidden;
+    margin: 16px
+}
+
+.pricing-chart-container {
+    margin: 8px 0px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    width: calc(33% - 12px);
+    overflow: hidden;
+}
+
+.pricing-chart-container .plan-name {
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
+    font-size: 20px;
+	text-align: center;
+}
+.plan-info {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.plan-info li {
+    padding: 8px 0px;
+    border-bottom: 1px solid #F2f2f2;
+}
+
+#monthly,#quarterly
+{
+text-decoration:none;
+padding:15px;
+background:#F5AA23;
+color:white;
+cursor:pointer;
+margin:15px 0;
+border:3px solid #F5AA23;
+border-bottom-left-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+#quarterly
+{
+background:#fff;
+color:#F5AA23;
+border-bottom-left-radius: 0;
+border-top-left-radius: 0;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+#plan1,#plan1a,#plan2,#plan2b,#plan3,#plan3c
+{
+text-align:center;
+}
+
+#plan1a,#plan2b,#plan3c,#timea,#taska,#taskb,#taskc
+{
+	display:none;
+}
+.aboutc p
+{
+padding-left:25%;
+padding-right:25%;
+padding-top:20px;
+font-family: 'Open Sans', sans-serif;;
+}
+
+#but
+{
+  outline:none;
+  background:#000;
+  color:#fff;
+  padding:10px;
+  border-radius:10px;
+
+}
+
+#list a
+{
+font-size:20px;
+text-align:center;
+cursor:pointer;
+}
+#list a:hover
+{
+  color:#ff5050;
+}
+
+
+.navbar-inner {
+    background-color:transparent;
+}
+navbar-default {
+	background-color:transparent !important;
+	border-color:transparent;
+	background-image:none;
+	box-shadow:none;	
+}
+.call{
+padding-left:40%;
+}
+.grey.darken-3 {
+  background-color: #424242 !important;
+}
+.planning{
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	 font-family: Open Sans-Regular;
+     font-size: 34px;
+     line-height:41px;
+}
+.plann{
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-family: Open Sans-Regular;
+    font-size: 16px;
+    line-height:30px;
+}
+.planning1{
+font-family: Open Sans-Regular;
+    font-size: 24px;
+    line-height:29px;
+}
+.btm{
+background-color:F5AA23;
+ -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.dropbtn {
+    background-color: #000000;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:#000000;
+}
+<style>
+body {
+  line-height: 0;
+}
+
+
+body {
+  font: 13px/20px;
+  color: #404040;
+  background: white;
+}
+
+.plans {
+  width: 777px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.plan {
+  float: left;
+  width: 231px;
+  margin: 10px 11px;
+  padding: 0px 3px;
+  text-align: center;
+  background: #F5F5F5;
+  background-clip: padding-box;
+  border: 0px solid #e5ded6;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.plan-title {
+  margin-bottom: 12px;
+  font-size: 24px;
+  line-height:29px;
+  color: black;
+}
+
+.plan-price {
+  margin-bottom: 20px;
+  line-height: 29px;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+.plan-button {
+  position: relative;
+  display: block;
+   margin: 14px 37px;
+  padding: 0px 3px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #cf7e3b;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+.plan-button:active {
+  top: 2px;
+  margin-bottom: 2px;
+  border-bottom: 0;
+}
+.plan-button {
+  font-size: 18px;
+  line-height: 49px;
+  background: #37bce5;
+  border-color: #3996b3;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.planning {
+  font-family: Open Sans-Regular;
+  font-size: 24px;
+  line-height:29px;
+ 
+}
+.plann{
+font-family: Open Sans-Light;
+  font-size: 16px;
+  line-height:30px;
+}
+.planning1{
+    -webkit-margin-before: 2.7em;
+    -webkit-margin-after: 5.7em;
+    -webkit-margin-start: 0%;
+    -webkit-margin-end: 126px;
+  font-family: Open Sans-Regular;
+  font-size: 24px;
+  line-height:29px;
+}
+.planning2{
+    -webkit-margin-before: 2.7em;
+    -webkit-margin-after: 10.7em;
+    -webkit-margin-start: 0%;
+    -webkit-margin-end: 126px;
+  font-family: Open Sans-Regular;
+  font-size: 24px;
+  line-height:29px;
+}
+.plann1{
+-webkit-margin-before: 0.7em;
+    -webkit-margin-after: 0.7em;
+    -webkit-margin-start: 0%;
+    -webkit-margin-end: -76px;
+font-family: Open Sans-Light;
+  font-size: 16px;
+  line-height:30px;
+}
+.plant{
+  -webkit-margin-before: -7.8em;
+    -webkit-margin-after: 0.7em;
+    -webkit-margin-start: 19%;
+    -webkit-margin-end: 70px;	
+  position:relative;
+  display:inline-block;
+
+}
+
+.another{
+    -webkit-margin-before: 2em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: -48px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+font-family: Open Sans-Regular;
+  font-size: 16px;
+  line-height:24px;
+  position:relative;
+  display:inline-block;
+  list-style:none;
+ 
+  }
+ .another1{
+    -webkit-margin-before: 2em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: -83px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+font-family: Open Sans-Regular;
+  font-size: 16px;
+  line-height:24px;
+  position:relative;
+  display:inline-block;
+  list-style:none;	
+   }
+   ul {
+  list-style: none;
+}
+.footer-title {
+    font-size: 22px;
+    padding: 8px 0px;
+	
+	}
+	.white-text {
+    color: #fff !important;
+	}
+	
+.container {
+       max-width: 975px;
+	   
+}
+@media only screen and (min-width: 601px)
+.container {
+    width: 85%;
+	}
+	.container {
+    margin: 0 auto;
+			}
+			.container1 {
+       max-width: 975px;
+	   color:white;
+	   
+}
+h4{
+
+color:grey;
+}
+.fa-lg {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%;
+	color:grey;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+
+
+</style>
+
+
+	
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	 <script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.js"></script>
+	 <script src="js/contact_me.js"></script>
+  <script src="js/jqBootstrapValidation.js"></script>
+  
+	
+
+   
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="logo-container" href="index.html" class="navbar-brand"><img class="responsive-img" src="img/logo_new.png" width="128px" height="36px">
+				</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                   
+                    
+                    <li class="dropdown">
+                        <button class="dropbtn">Shopify services</button> <b class="caret"></b></a>
+                        <ul class="dropdown-content">
+						<li>
+                                <a href="freestoresetup.html">Free Store Setup</a>
+                            </li>
+					  
+							<li>
+                                <a href="addingproducts.html">Adding Products</a>
+                            </li>
+                            <li>
+                                <a href="graphics.html">Graphic Services</a>
+                            </li>
+                            <li>
+                                <a href="app.html">App Inttegrations</a>
+                            </li>
+                            <li>
+                                <a href="small.html">Small Tasks</a>
+                            </li>
+                            <li>
+                                <a href="hire.html">Hire a VA/Team</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">E-Commerce Services</button> <b class="caret"></b></a>
+                        <ul class="dropdown-content">
+                            <li>
+                                <a href="onlinestore.html">Online Store Setup</a>
+                            </li>
+                            <li>
+                                <a href="app.html">App Development</a>
+                            </li>
+                            <li>
+                                <a href="webdevelopment.html">Web Development</a>
+                            </li>
+                        </ul>
+                    </li>
+					<li>
+                        <a href="pricing-chart.html">Pricing_Chart</a>
+                    </li>
+                    
+					<li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('img/img1.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>The Shopify Experts</h2>
+					<p>Fuel Your Growth with our services</p>
+					<a href="contact.html" class="grey-text text-darken-4 btn waves-effect waves-light theme-yellow">GET STARTED</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('img/img2.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Free Shopify Store Setup</h2>
+					<p>Create an online store</p>
+					<a href="#services" class="btn grey-text text-darken-4 waves-effect waves-light theme-yellow">VIEW SERVICES</a>
+					<a href="contact.html" class="grey-text text-darken-4 btn waves-effect waves-light theme-yellow">GET A QUOTE</a>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+<div class="section ng-scope">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center">
+                <h5>Are you the owner of a small business? Are you aspiring to expand your operations,but feel constricted by the physical limitations of brick and mortar stores?</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div>
+                    <h5>WHAT IS E-COMMERCE STORE SETUP</h5>
+                    <p class="light">E-commerce store setup is a service that helps to get the very basic or necessary steps done to kick start your own online business.</p>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="white">
+                    <h5>WHY E-COMMERCE STORE SETUP</h5>
+                    <p class="light">A strong online presence is crucial for expanding your clientele and which span far beyond the confines of your locality.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+<center>HOW IT WORKS
+</center><u>
+<div class="row">
+<center>With the help of our team of highly skilled experts, you can now take a definitve step towards making your business's online debut</center>
+<hr width="900px">
+<br><br>
+<div class="row">
+<div class="col-xs-6">
+<ul>
+<li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i>30 minutes Project Consultation.</li>
+<li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i>Setting up your shopify account.</li>
+<li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i>Custom domain association with your shopify account.</li>
+<li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i>Installation of best available basic theme on your store.</li>
+<li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i>Upload an existing logo to your store’s theme.</li>
+<li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i>Setup upto 18 products. (You should provide the content).</li>
+<li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i>Setup upto 8 collections.</li>
+<li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i>Setup contact form, contact information and Google map </br> &nbsp;&nbsp;&nbsp;&nbsp;integration.</li>
+</ul>
+</div>
+
+  <div class="col-xs-6">
+	  <img src="img/web.png" alt="image" style="width:304px;height:228px;"></div><br>
+	  <hr><br>
+	  </div>
+	  </div>
+	  </div>
+<div class="container">
+
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Contact Us Today!</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Phone #</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+      
+<div class="form-group">
+  <label class="col-md-4 control-label">Address</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="address" placeholder="Address" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+ 
+<div class="form-group">
+  <label class="col-md-4 control-label">City</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="city" placeholder="city" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Select Basic -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">State</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="state" class="form-control selectpicker" >
+      <option value=" " >Please select your state</option>
+      <option>Alabama</option>
+      <option>Alaska</option>
+      <option >Arizona</option>
+      <option >Arkansas</option>
+      <option >California</option>
+      <option >Colorado</option>
+      <option >Connecticut</option>
+      <option >Delaware</option>
+      <option >District of Columbia</option>
+      <option> Florida</option>
+      <option >Georgia</option>
+      <option >Hawaii</option>
+      <option >daho</option>
+      <option >Illinois</option>
+      <option >Indiana</option>
+      <option >Iowa</option>
+      <option> Kansas</option>
+      <option >Kentucky</option>
+      <option >Louisiana</option>
+      <option>Maine</option>
+      <option >Maryland</option>
+      <option> Mass</option>
+      <option >Michigan</option>
+      <option >Minnesota</option>
+      <option>Mississippi</option>
+      <option>Missouri</option>
+      <option>Montana</option>
+      <option>Nebraska</option>
+      <option>Nevada</option>
+      <option>New Hampshire</option>
+      <option>New Jersey</option>
+      <option>New Mexico</option>
+      <option>New York</option>
+      <option>North Carolina</option>
+      <option>North Dakota</option>
+      <option>Ohio</option>
+      <option>Oklahoma</option>
+      <option>Oregon</option>
+      <option>Pennsylvania</option>
+      <option>Rhode Island</option>
+      <option>South Carolina</option>
+      <option>South Dakota</option>
+      <option>Tennessee</option>
+      <option>Texas</option>
+      <option> Uttah</option>
+      <option>Vermont</option>
+      <option>Virginia</option>
+      <option >Washington</option>
+      <option >West Virginia</option>
+      <option>Wisconsin</option>
+      <option >Wyoming</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Zip Code</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+    </div>
+</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">Website or domain name</label>  
+   <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+  <input name="website" placeholder="Website or domain name" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- radio checks -->
+ <div class="form-group">
+                        <label class="col-md-4 control-label">Do you have hosting?</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="yes" /> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="no" /> No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Text area -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Project Description</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+        	<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Call to Action Section -->
+        <div class="well">
+            <div class="row">
+                <div class="col-md-8">
+				<h3>Interested in our services?</h3>
+                    <p>Gangez fuels e-Commerce companies to grow and sell more online</p>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-lg btn-default btn-block" href="#">Make a Call</a>
+                </div>
+            </div>
+        </div>
+
+
+
+		<footer class="page-footer grey darken-3">
+        
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="footer-title white-text"><h3>About Gangez</h3></div>
+                    <ul>
+                        <li><a href="about.html"><h4>Our Story</h4></a></li>
+                        <li><a href="about.html"><h4>Our Mission</h4></a></li>
+                        <li><a href="contact.html"><h4>Contact Us</h4></a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                    <div class="footer-title white-text"><h3>Quick Links</h3></div>
+                    <ul>
+                       <li><a href="freestoresetup.html"><h4>Free Store Setup*</h4></a></li>
+                        <li><a href="hire.html"><h4>Hire a VA or Team</h4></a></li>
+                        <li><a href="addingproducts.html"><h4>Data Entry</h4></a></li>
+                        <li><a href="small.html"><h4>Small Tasks</h4></a></li>
+                        <li><a href="privacy-policy.html"><h4>Privacy Policy</h4></a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                    <div class="footer-title white-text"><h3>Open A Free Store</h3></div>
+                    <ul>
+                        <li>
+                            <a href="https://www.shopify.com/?ref=gangez" target="_blank">
+                                <img class="responsive-img footer-store-img" src="img/free-store.jpg">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                    <div class="footer-title white-text"><h3>Follow Us</h3></div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/gangezgroup" target="_blank"> <i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>&nbsp;
+                        <a href="https://twitter.com/Gangez_Group" target="_blank"> <i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>&nbsp;
+                        <a href="https://www.linkedin.com/in/gangez" target="_blank"> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>&nbsp;
+                        <a href="https://plus.google.com/u/0/114639515470535406892" target="_blank"> <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a>
+                    </div>
+                    <div>
+                        <form action="//inkedcreatively.us9.list-manage.com/subscribe/post?u=1b9602e200657160c01f5c06e&amp;id=175250e2f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate ng-pristine ng-valid" target="_blank" novalidate="novalidate">
+                              <div class="footer-title white-text">Stay Updated</div>
+                            <div class="label">
+                                <input type="email" name="email" class="validate" required="" id="mce-EMAIL" aria-required="true">
+                                <label for="mce-EMAIL" data-error="Enter a valid email address">Email Address *</label>
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="b_1b9602e200657160c01f5c06e_175250e2f5" tabindex="-1" value="">
+                            </div>
+                            <i class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow waves-input-wrapper" style=""><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="waves-button-input"></i>
+                        </form>
+                    </div>
+					 </div>
+            </div>
+                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                    <script type="text/javascript">
+                    (function($) {
+                        window.fnames = new Array();
+                        window.ftypes = new Array();
+                        fnames[0] = 'EMAIL';
+                        ftypes[0] = 'email';
+                    }(jQuery));
+                    var $mcj = jQuery.noConflict(true);
+                    </script>
+                    <!--End mc_embed_signup-->
+               
+        
+        <div class="row">
+		 <center><h4> <div class="col-sm-12">
+                © Copyrights Reserved. Gangez Support Services Pvt. Ltd.
+            </div></h4></center>
+        
+		</div>
+    </footer>
+	<!--<a class="btn-floating btn-large waves-effect waves-light theme-yellow scroll-btn show" style=""><i class="fa fa-arrow-up" aria-hidden="true"></i></a>-->
+	<div class="hiddendiv common" style=""></div>
+	<div class="drag-target" style="left:0px touch-action:pan-y; -webkit-user-drag:none; -webkit-tap-highlight-color:rgba(0,0,0,0);">
+	<div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
+	</div>
+	 <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+</html>
